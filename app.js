@@ -1,7 +1,8 @@
 var connect = require('connect'),
   express = require('express'),
   jade = require('jade'),
-  app = express.createServer();
+  app = express.createServer(),
+  port = process.env.PORT || 3000;
 
 app.configure(function () {
   app.set('view engine', 'jade');
@@ -19,5 +20,5 @@ app.get('/', function (req, res) {
   res.render('index', {msg: 'Hello, world!', layout: 'layout'});
 });
 
-app.listen(3000);
-console.log('Server at http://0.0.0.0:3000');
+app.listen(port);
+console.log('Server at http://0.0.0.0:' + port);
