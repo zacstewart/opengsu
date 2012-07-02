@@ -9,13 +9,22 @@ html
     script(src='javascripts/lib/backbone.js')
     script(src='javascripts/application.js')
   body
-    .container
-      .row
-        .span12.page-header
+    .container-fluid
+      .row-fluid
+        .span11.page-header
           h1.headline Open GSU
       .row
-        #content.span12
+        #sidebar.span3
+        #content.span9
           block content
+    script#sidebar_template(type='text/html')
+      ul.nav.nav-pills.nav-stacked
+        li.active
+          a(href='#salaries') Salaries
+        li
+          a(href='#travel') Travel
+        li
+          a(href='#expenses') Expenses
     script#base_view(type='text/html')
       .btn-group
         a(href="#total", class='btn') Total
