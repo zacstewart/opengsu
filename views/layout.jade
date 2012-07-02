@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    title Open GSU
+    link(rel='stylesheet', href='stylesheets/bootstrap.css')
+    script(src='javascripts/lib/d3.v2.js')
+    script(src='javascripts/lib/zepto.js')
+    script(src='javascripts/lib/underscore.js')
+    script(src='javascripts/lib/backbone.js')
+    script(src='javascripts/application.js')
+  body
+    .container
+      .row
+        .span12.page-header
+          h1.headline Open GSU
+      .row
+        #content.span12
+          block content
+    script#base_view(type='text/html')
+      .btn-group
+        a(href="#total", class='btn') Total
+        a(href="#mean", class='btn') Mean
+      .graph

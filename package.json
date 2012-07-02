@@ -1,0 +1,9 @@
+{
+  "name": "open-gsu",
+  "version": "0.0.1",
+  "dependencies": {
+    "connect": "2.3.x",
+    "express": "3.0.x",
+    "jade": "0.26.x"
+  }
+}
